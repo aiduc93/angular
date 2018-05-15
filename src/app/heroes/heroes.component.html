@@ -1,0 +1,36 @@
+ <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+</div>
+<h1>{{hero.name | uppercase}} Detail</h1>
+<div><span> {{hero.id}}</span></div>
+<div><span> {{hero.name}}</span></div> 
+<table class="table">
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    <tr *ngFor='let hero of Heroes' (click)= onSelect(hero)>
+      <td>{{hero.id}}</td>
+      <td>{{hero.name}}</td>
+    </tr>
+  </tbody>
+</table> 
+<div *ngIf="selectedHero">
+  <app-hero-detail [hero]='selectedHero'></app-hero-detail> 
+</div>
+<h2>Get data from Service</h2>
+<table class="table">
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    <tr *ngFor='let hero of heroes' (click)= onSelect(hero)>
+      <td>{{hero.id}}</td>
+      <td>{{hero.name}}</td>
+    </tr>
+  </tbody>
+</table> 

@@ -1,0 +1,7 @@
+<div *ngIf='hero'>
+  <h1>{{hero.name | uppercase}} Details</h1>
+  <div class="form-group">
+    <label class='label'>id: {{hero.id}}</label>
+    <input type="text" class='form-control' [(ngModel)]='hero.name'>
+  </div>
+</div>
